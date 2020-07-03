@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="demo">
+  <head>
+    <title>Assignment 4</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <link type="text/css" rel="stylesheet" href="style.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="javascriptfrontend.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+
+  </head>
+
+  <body ng-controller="Hello">
+    <div class="header">
+      <h1>Quiz 4</h1>
+      <h2>Pranay Rao</h2>
+      <h2>1001789904</h2>
+      <br />
+      <br />
+    </div>
+
+    <h2>For Scatter Plot</h2>
+    <form action="Scatter-Chart">
+      country name
+      <input type="text" name="scnt" ng-model="cnt" required>
+      year range from
+      <input type="text" name="smin" ng-model="smin" required>
+      To year
+      <input type="text" name="smax" ng-model="smax" required>
+    </form>
+    <input
+      type="button"
+      style="cursor: pointer;"
+      value="Show Scatter Plot"
+      ng-click="showscatter()"
+    /><br /><br />
+    <!-- <span>{{result_scatter}}</span> -->
+
+
+  <!-- ############################################################################# -->
+    <form action="Pie-Chart">
+      <h2>For Pie-Chart Plot</h2>
+      <form name="myForm">
+        <label><h3>Enter input</h3></label><br />
+           Country Name:
+           <input type="text" name= "country" ng-model="countryname" required>
+           From Year:
+           <input type="text" name="code" ng-model="input1" required>
+           To Year:
+           <input type="text" name="code" ng-model="input2" required>
+        <input
+        type="button"
+        style="cursor: pointer;"
+        value="Show Pie Plot"
+        ng-click="piefuncall()"
+      /><br /><br />
+    </form>
+<!-- ######################################################################### -->
+
+    <h2>For Bar-Chart Plot</h2>
+    <form action="Bar-Chart">
+        <label><h3>Enter input</h3></label><br />
+        Country Name:
+           <input type="text" name= "country" ng-model="countryname" required>
+           From Year:
+           <input type="text" name="input1" ng-model="input1" required>
+           To Year:
+           <input type="text" name="input2" ng-model="input2" required>
+        <input
+    <input
+      type="button"
+      style="cursor: pointer;"
+      value="Show Bar Plot"
+      ng-click="barfuncall()"
+    /><br /><br />
+    <!-- <span>{{result_bar}}</span> -->
+    <!-- <div id="chart_div" style="width: 900px; height: 500px;"></div> -->
+
+    <h2>For Multiple Bar-Chart Plot</h2>
+    <form action="Bar-Chart">
+        <label><h3>Enter input</h3></label><br />
+           From Year:
+           <input type="text" name="input1" ng-model="input1" required>
+           To Year:
+           <input type="text" name="input2" ng-model="input2" required>
+        <input
+    <input
+      type="button"
+      style="cursor: pointer;"
+      value="Show Bar Plot"
+      ng-click="barfuncall_multiple()"
+    /><br /><br />
+    <div id="container" style="overflow: hidden;width: 75%;"></div>
+    <div id="containerBar" style="overflow: hidden;width: 50%;"></div>
+    <div id="containerscar" style="overflow: hidden;width: 50%;"></div>
+
+  </body>
+</html>
